@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">TestActivity</string>
+    <string-array name="effects">
+        <item>效果1</item>
+        <item>效果2</item>
+        <item>效果3</item>
+        <item>效果4</item>
+        <item>效果5</item>
+        <item>效果6</item>
+        <item>效果7</item>
+        <item>效果8</item>
+    </string-array>
+</resources>
