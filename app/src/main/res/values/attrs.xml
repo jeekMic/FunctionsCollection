@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ProgressView">
+        <attr name="circleColor" format="color|reference"/>
+        <attr name="sweepColor" format="color|reference"/>
+        <attr name="startAngle" format="integer"/>
+        <attr name="sweepStep" format="integer"/>
+        <attr name="padding" format="integer"/>
+    </declare-styleable>
+    <declare-styleable name="HProgressView">
+        <attr name="background_Color" format="color|reference"/>
+        <attr name="progress_Color" format="color|reference"/>
+    </declare-styleable>
+</resources>

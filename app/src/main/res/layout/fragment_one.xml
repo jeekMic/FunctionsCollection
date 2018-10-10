@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<com.example.administrator.testactivity.custom.ProgressView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#33000000"
+    app:padding="20"
+    app:circleColor="#70f3ff"
+    app:sweepColor="#70f3ff"
+    app:sweepStep="1"
+    app:startAngle="180"
+    />
+</LinearLayout>

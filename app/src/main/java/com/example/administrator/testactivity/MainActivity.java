@@ -8,7 +8,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Toast;
 
+
+import com.example.administrator.testactivity.activity.EventActivity;
+import com.example.administrator.testactivity.activity.JavaScriptActivity;
+import com.example.administrator.testactivity.activity.MyCustomViewActivity;
+import com.example.administrator.testactivity.activity.MyDownloadThread;
 import com.example.administrator.testactivity.activity.MyRecycleViewActivity;
+import com.example.administrator.testactivity.activity.RxJavaActivity;
 import com.example.administrator.testactivity.adapter.RvAdapter;
 import com.example.administrator.testactivity.imple.RecycViewOnItemClicked;
 
@@ -38,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
      * 初始化相关的逻辑
      */
     private void initlogic() {
-
         mRvAdapter = new RvAdapter(functions,this, itemClicked);
 
         linearLayoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
@@ -52,11 +57,11 @@ public class MainActivity extends AppCompatActivity {
     private void initData() {
         functions = new ArrayList<>();
         functions.add("recycleview的相关使用");
-        functions.add("未知的相关使用");
-        functions.add("未知的相关使用");
-        functions.add("未知的相关使用");
-        functions.add("未知的相关使用");
-        functions.add("未知的相关使用");
+        functions.add("自定义View的逐渐剖析");
+        functions.add("断点续传");
+        functions.add("混合开发");
+        functions.add("RxJava");
+        functions.add("事件传递");
         functions.add("未知的相关使用");
         functions.add("未知的相关使用");
         functions.add("未知的相关使用");
@@ -116,6 +121,21 @@ public class MainActivity extends AppCompatActivity {
             switch (position){
                 case 0:
                    startActivity(new Intent(MainActivity.this, MyRecycleViewActivity.class));
+                    break;
+                case 1:
+                    startActivity(new Intent(MainActivity.this, MyCustomViewActivity.class));
+                    break;
+                case 2:
+                    startActivity(new Intent(MainActivity.this, MyDownloadThread.class));
+                    break;
+                case 3:
+                    startActivity(new Intent(MainActivity.this, JavaScriptActivity.class));
+                    break;
+                case 4:
+                    startActivity(new Intent(MainActivity.this, RxJavaActivity.class));
+                    break;
+                case 5:
+                    startActivity(new Intent(MainActivity.this, EventActivity.class));
                     break;
                 default:
                     break;

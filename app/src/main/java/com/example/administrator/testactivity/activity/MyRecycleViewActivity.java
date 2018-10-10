@@ -13,6 +13,7 @@ import android.view.animation.AnimationUtils;
 import android.view.animation.LayoutAnimationController;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -51,7 +52,6 @@ public class MyRecycleViewActivity extends AppCompatActivity implements  Adapter
         initData();//初始化数据
         initLogic();//初始化逻辑
     }
-
     private void initLogic() {
         rv_1.addItemDecoration(new CustomDividerItem(LinearLayoutManager.VERTICAL,10));
         adapter = new RvAdapterMy(this,names,listener);
@@ -65,7 +65,6 @@ public class MyRecycleViewActivity extends AppCompatActivity implements  Adapter
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(arrayAdapter);
         spinner.setOnItemSelectedListener(this);
-
 
 
         //动画效果
@@ -97,6 +96,7 @@ public class MyRecycleViewActivity extends AppCompatActivity implements  Adapter
             @Override
             public void onitemClick(View view, int position) {
                 Toast.makeText(MyRecycleViewActivity.this, ""+position, Toast.LENGTH_SHORT).show();
+                adapter.notifyDataSetChanged();
             }
         };
     }

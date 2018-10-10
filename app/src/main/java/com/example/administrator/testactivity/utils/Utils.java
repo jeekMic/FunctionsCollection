@@ -1,12 +1,13 @@
 package com.example.administrator.testactivity.utils;
 
+import android.view.MotionEvent;
+
 import java.util.Random;
 
 public class Utils {
 
 
     public static String getRandomColor(){
-
         //红色
         String red;
         //绿色
@@ -30,7 +31,21 @@ public class Utils {
         blue = blue.length()==1 ? "0" + blue : blue ;
         //生成十六进制颜色值
         String color = "#"+red+green+blue;
-
         return color;
+    }
+
+    public static String getActionName(int action){
+        switch (action){
+            case MotionEvent.ACTION_DOWN:
+                return "ACTION_DOWN";
+            case MotionEvent.ACTION_MOVE:
+                return "ACTION_MOVE";
+            case MotionEvent.ACTION_UP:
+                return "ACTION_UP";
+            case MotionEvent.ACTION_CANCEL:
+                return "ACTION_CANCEL";
+            default:
+                return"break";
+        }
     }
 }

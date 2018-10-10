@@ -2,7 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.administrator.testactivity">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
+        android:name=".MyApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -17,7 +21,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.MyRecycleViewActivity" />
-        <activity android:name=".activity.Main2Activity"></activity>
+        <activity android:name=".activity.MyCustomViewActivity" />
+        <activity android:name=".activity.MyDownloadThread" />
+        <activity android:name=".activity.JavaScriptActivity" />
+        <activity android:name=".activity.RxJavaActivity" />
+        <activity android:name=".activity.EventActivity"/>
     </application>
 
 </manifest>

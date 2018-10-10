@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .body{
+            background-color: #00ff00;
+        }
+    </style>
+</head>
+<body class="body">
+这个是javaScript测试页面<br>
+<!--<form action="#" method="post">-->
+    <!--用户名：<input type="text" name="name" id="names"/><br>-->
+    <!--密码：<input type="password" name="pwd" id="passwords"/><br>-->
+    <!--<input type="button" value="提交" id="submits"/>-->
+<!--</form>-->
+<span id="name">jack</span><br>
+<span id="pwd">123456</span><br>
+<input type="button" value="测试" id="btn"/>
+<br>
+<script>
+    function call_Test() {
+        console.log("调用了javaScript");
+        alert("javaScript方法被调用了")
+    }
+    let btnEvent = document.getElementById("btn");
+    let name = document.getElementById("name");
+    let pwd = document.getElementById("pwd");
+    btnEvent.onclick = function () {
+        let strname = name.innerText;
+        let strpwd= pwd.innerText;
+        alert(strname+"--"+strpwd)
+        window.android.setValue(strname+"--"+strpwd)
+    }
+    function toast(){
+        alert("收到数据了，来自java")
+    }
+</script>
+</body>
+</html>
